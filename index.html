@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pranjul | Portfolio</title>
+    
+<script src="script.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+        background: linear-gradient(to bottom, #f5f5f5, #eaeaea);
+    color: #222;
+        }
+
+        /* ===== Navbar ===== */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #000;
+            color: wheat;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 40px;
+            z-index: 1000;
+        }
+
+        .navbar a {
+            color: wheat;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: bold;
+        }
+
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+
+        /* ===== Main Content ===== */
+        .main {
+            margin-top: 80px; /* prevents hiding behind navbar */
+            padding: 40px;
+        }
+
+        section {
+            margin-bottom: 50px;
+        }
+
+        h2 {
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        /* ===== About ===== */
+        .about img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            margin: 15px 0;
+        }
+
+        /* ===== Skills ===== */
+        .skill ul {
+            padding-left: 20px;
+        }
+
+        /* ===== Education ===== */
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            max-width: 600px;
+        }
+
+        table, th, td {
+            border: 1px solid #333;
+            padding: 10px;
+            text-align: center;
+        }
+
+        /* ===== Projects ===== */
+        .project article {
+            margin-bottom: 15px;
+        }
+
+        /* ===== Contact ===== */
+        form input, form textarea {
+            width: 100%;
+            max-width: 400px;
+            padding: 8px;
+        }
+       
+
+        /* ===== Footer ===== */
+        .footer {
+            background-color: #000;
+            color: wheat;
+            text-align: center;
+            padding: 20px;
+        }
+        .footer a {
+    color: wheat;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* ===== Hero Section ===== */
+.hero {
+    height: 100vh;
+    margin-top: 60px; /* navbar height */
+    background: linear-gradient(120deg, #000, #1a1a1a);
+    color: wheat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Profile Image */
+.hero-img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: 3px solid wheat;
+    margin-bottom: 20px;
+}
+
+/* Text */
+.hero-content h1 {
+    font-size: 42px;
+}
+
+.hero-content h1 span {
+    color: #f5c16c;
+}
+
+.hero-content p {
+    max-width: 600px;
+    margin: 15px auto 25px;
+}
+
+/* Buttons */
+.hero-buttons .btn {
+    display: inline-block;
+    padding: 10px 25px;
+    margin: 5px;
+    background-color: wheat;
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 6px;
+}
+
+.hero-buttons .btn-outline {
+    background: transparent;
+    border: 2px solid wheat;
+    color: wheat;
+}
+
+/* ===== Animated Text ===== */
+.typing {
+    font-size: 22px;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 3px solid wheat;
+    width: 0;
+    animation: typing 4s steps(40, end) forwards,
+               blink 0.7s infinite;
+}
+
+@keyframes typing {
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+/* ===== Scroll Down Indicator ===== */
+.scroll-down {
+    position: absolute;
+    bottom: 20px;
+    font-size: 14px;
+    animation: bounce 1.5s infinite;
+    opacity: 0.8;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(8px);
+    }
+}
+
+
+
+
+
+    </style>
+</head>
+
+<body>
+
+    <!-- ===== Navbar ===== -->
+    <nav class="navbar">
+        <div class="logo">Pranjul Gupta</div>
+        <div>
+            <a href="#about">About</a>
+            <a href="#skill">Skills</a>
+            <a href="#education">Education</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+    <!-- ===== Hero Section ===== -->
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        
+        <img src="profilepic.jpg" alt="Pranjul Gupta" class="hero-img">
+
+      
+        <h1>Hello, I'm <span>Pranjul Gupta</span></h1>
+
+       
+        <h3 class="typing">
+            B.Tech Student | Web Developer | Problem Solver
+        </h3>
+
+        <p>
+            Passionate about technology, problem-solving, and building real-world
+            applications using modern web technologies.
+        </p>
+
+        
+        <div class="hero-buttons">
+            <a href="#projects" class="btn">View Projects</a>
+            <a href="#contact" class="btn btn-outline">Contact Me</a>
+        </div>
+
+    </div>
+
+   
+    <div class="scroll-down">
+        ↓ Scroll Down
+    </div>
+
+</section>
+
+
+
+
+
+    <!-- ===== Main ===== -->
+    <div class="main">
+
+        <section id="about" class="about">
+            <h2>About Me</h2>
+           
+            <p>
+                I am a B.Tech student who is passionate about learning technology and building useful applications.
+                I enjoy coding, exploring new tools, and improving my skills every day.<br>
+                I am focused on personal growth, career development, and becoming a better version of myself.
+            </p>
+        </section>
+
+        <section id="skill" class="skill">
+            <h2>Skills</h2>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>Java</li>
+                <li>C++</li>
+                <li>DSA</li>
+            </ul>
+        </section>
+
+        <section id="education" class="edu">
+            <h2>Education</h2>
+            <table>
+                <tr>
+                    <th>Year</th>
+                    <th>Degree</th>
+                    <th>Branch</th>
+                    <th>College</th>
+                </tr>
+                <tr>
+                    <td>3rd Year</td>
+                    <td>B.Tech</td>
+                    <td>CSE</td>
+                    <td>LPU</td>
+                </tr>
+            </table>
+        </section>
+
+        <section id="projects" class="project">
+            <h2>Projects</h2>
+            <ol>
+                <li>
+                    <article>
+                        <h3>Social Media Auto-Posting Web App</h3>
+                        <p>
+                            A web application concept that allows users to schedule and auto-post content on multiple
+                            social media platforms using APIs.
+                        </p>
+                        <p><strong>Tech:</strong> HTML, JavaScript, APIs</p>
+                    </article>
+                </li>
+
+                <li>
+                    <article>
+                        <h3>Graph Visualizer Web App</h3>
+                        <p>
+                            An interactive web-based graph visualization tool designed to help users understand
+                            graph algorithms visually.
+                        </p>
+                        <p><strong>Tech:</strong> HTML, CSS, JavaScript</p>
+                    </article>
+                </li>
+
+                <li>
+                    <article>
+                        <h3>MIS for Rural Housing Schemes</h3>
+                        <p>
+                            Managing rural housing schemes like Garib Awas Yojana using a GIS-based MIS.
+                        </p>
+                        <p><strong>Tech:</strong> PHP, MySQL, GIS</p>
+                    </article>
+                </li>
+            </ol>
+        </section>
+
+        <section id="contact" class="contact">
+            <h2>Contact</h2>
+            <form action="#" id="form" method="post">
+                <label>Name</label><br>
+                <input type="text" placeholder="Enter your name"><br><br>
+
+                <label>Email</label><br>
+                <input type="email" placeholder="Enter your email"><br><br>
+
+                <label>Message</label><br>
+                <textarea rows="4" placeholder="Write your message"></textarea>
+                <br>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+
+    </div>
+
+    <!-- ===== Footer ===== -->
+    <div class="footer">
+        © 2026 Pranjul Gupta | Software Developer <br>
+        Crafting solutions with code & creativity.
+          <br><br>
+    📧 <a href="mailto:pranjulgupta0912@gmail.com">pranjulgupta0912@gmail.com</a> |
+    📱 <a href="tel:+916388576630">+91 6388576630</a> |
+    💻 <a href="https://github.com/pranjul1203" target="_blank" rel="noopener">GitHub</a> |
+    🔗 <a href="https://www.linkedin.com/in/009-pranjulgupta/" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+
+
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
